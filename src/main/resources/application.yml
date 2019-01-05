@@ -4,16 +4,6 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     cache: false
-  datasource:
-    druid:
-      filter:
-        config:
-          enabled: true
-      connection-properties: config.decrypt=true;config.decrypt.key=${spring.datasource.druid.publicKey}
-
-
-
-
 
     #    driverClassName : com.microsoft.sqlserver.jdbc.SQLServerDriver
     #driver-class-name: com.mysql.jdbc.Driver
