@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
+
     <meta charset="UTF-8">
     <title>account</title>
-    <script  src="/js/commonJs.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script  src="/layui/layui.js"></script>
 
 </head>
-<body class="childrenBody">
+<body>
 
-    <table class="layui-table" lay-data="{height:315, url:'/admin/getItem', page:true, id:'test',toolbar:'default'}">
+    <table class="layui-table" lay-data="{height:600,url:'/admin/getItem', page:true,limit:20, id:'test',toolbar:'default'}">
         <thead>
             <tr>
                 <th lay-data="{field:'id',sort: true}">ID</th>
@@ -22,17 +18,14 @@
                 <th lay-data="{field:'sellPoint'}">ACCOUNT</th>
                 <th lay-data="{field:'price'}">PASS</th>
                 <th lay-data="{field:'num'}">REMARKS</th>
-                <th lay-data="{field:'barcode', sort: true}">CREATE_TIEM</th>
 
             </tr>
         </thead>
     </table>
 </body>
-<script type="application/javascript">
-    $(function () {
-        $(".add_btn").click(function () {
-            layeropen("/admin/content/addAcount","123");
-        })
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
     })
 </script>
 </html>

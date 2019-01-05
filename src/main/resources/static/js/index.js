@@ -10,7 +10,6 @@ layui.use(['bodyTab','form','element','layer'],function(){
     	layer = parent.layer === undefined ? layui.layer : top.layer;
 		tab = layui.bodyTab({
 			openTabNum : "15",  //最大可打开窗口数量
-			url : "/admin/index/getmenu", //获取菜单json地址
             firstUrl:'/admin/index/index',//后台首页名
             firstTitle:'后台首页'//后台首页url
 		});
