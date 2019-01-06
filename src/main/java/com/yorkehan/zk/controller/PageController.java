@@ -25,7 +25,12 @@ public class PageController {
     }
     @RequestMapping("/login")
     public String login(){
-        return "redirect:/admin";
+        return "login";
+    }
+
+    @RequestMapping("/unauthorized")
+    public String erro(){
+        return "403";
     }
 
 }

@@ -1,12 +1,27 @@
-/config/zk,dev=spring.datasource.druid.filter.config.enable=true
+/config/zk,dev=spring.datasource.druid.filters=config
 /config/zk,dev=spring.datasource.druid.connection-properties=config.decrypt=true;config.decrypt.key=${spring.datasource.druid.publicKey}
 
 /config/zk,dev=spring.datasource.druid.url=jdbc:mysql://192.168.184.128:3306/demo?serverTimezone=GMT%2B8
 /config/zk,dev=spring.datasource.druid.username=root
-/config/zk,dev=spring.datasource.druid.password=UhF5gq1kE01L5qOlM25yKrvGRFS91U7coicQeRhu7St/CL6kGBDsdSCvGYJkf81jqrhPfb688eETqiLbSVh0nw==
-/config/zk,dev=spring.datasource.druid.publicKey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKkoSDvwutijoezwDyGHIu8zqV9mfIdsjrviciAxAUQLZfpRSiSZthm1syGyZirGOp1FLAf20Cer6x9+48Jhfi0CAwEAAQ==
+/config/zk,dev=spring.datasource.druid.password=mr3wa71knI/fPLvo7dg65SsqTdWucfHhtA5OfHez2QTAy1rll1YCkct++vQQ9TSza4IymSl0eng5U51mwrbFkA==
+/config/zk,dev=spring.datasource.druid.publicKey=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMxENV/6A39ksMF9dhB1/xIdaVcb/qgKwG2SmynHdllrYYN54hY+qMuaUG1JFVwc91X5Pa6nbipq9rqn9MP0Tx0CAwEAAQ==
 
 /config/zk,dev=spring.datasource.druid.driver-class-name=com.mysql.jdbc.Driver
 /config/zk,dev=spring.datasource.druid.connection-error-retry-attempts=0
 /config/zk,dev=spring.datasource.druid.break-after-acquire-failure=true
 /config/zk,dev=spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+
+spring.datasource.druid.publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMxENV/6A39ksMF9dhB1/xIdaVcb/qgKwG2SmynHdllrYYN54hY+qMuaUG1JFVwc91X5Pa6nbipq9rqn9MP0Tx0CAwEAAQ==
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  datasource:
+    druid:
+      username: root
+      password: mr3wa71knI/fPLvo7dg65SsqTdWucfHhtA5OfHez2QTAy1rll1YCkct++vQQ9TSza4IymSl0eng5U51mwrbFkA==
+      url: jdbc:mysql://192.168.184.128:3306/demo?serverTimezone=GMT%2B8
+      filters: config
+      connection-properties: config.decrypt=true;config.decrypt.key=${spring.datasource.druid.publicKey}
+      driver-class-name: com.mysql.jdbc.Driver

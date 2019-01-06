@@ -1,37 +1,8 @@
 
-spring:
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    cache: false
-
-    #    driverClassName : com.microsoft.sqlserver.jdbc.SQLServerDriver
-    #driver-class-name: com.mysql.jdbc.Driver
-    #type: com.alibaba.druid.pool.DruidDataSource
-    #url : jdbc:mysql://192.168.184.128:3306/demo?serverTimezone=GMT%2B8
-    #username: root
-    #password: 111111
-  #    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=demo
-  #    username: yorkehan
-  #    password: yorkehan
-  redis:
-    host: 45.32.137.229
-    port: 6379
-    password: admin
-    database: 0
-    timeout:
-    jedis:
-      pool:
-        max-active: 100
-        max-wait:
-        max-idle: 10
-  devtools:
-    restart:
-      enabled: true
 mybatis:
   type-aliases-package: com.yorkehan.pojo
 logging:
-  file: /software/java/idea-IU-182.5107.16/zk.log
+  file: D:\software\java\idea-IU-182.5107.16\zk.log
   level:
     com.yorkehan: debug
 pagehelper:
@@ -40,3 +11,12 @@ pagehelper:
 mapper:
   mappers: tk.mybatis.mapper.common.Mapper
   not-empty: true
+shiro:
+  unauthorizedUrl: /403
+  loginUrl: /login
+spring:
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    druid:
