@@ -12,7 +12,6 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.apache.yetus.audience.InterfaceAudience;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

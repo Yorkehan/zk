@@ -25,3 +25,32 @@ spring:
       filters: config
       connection-properties: config.decrypt=true;config.decrypt.key=${spring.datasource.druid.publicKey}
       driver-class-name: com.mysql.jdbc.Driver
+
+
+
+
+
+
+server:
+  port:8080
+spring:
+  application:
+    name: zk
+  profiles:
+    active: dev
+  cloud:
+    zookeeper:
+      enabled: true
+      connect-string: 192.168.184.128:2181
+      discovery:
+        enabled: true
+        instance-host: 127.0.0.1
+        instance-port: 8080
+
+    config:
+      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
