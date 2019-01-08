@@ -50,6 +50,10 @@ public class ShiroConfig {
         DefaultShiroFilterChainDefinition chain = new DefaultShiroFilterChainDefinition();
         //哪些请求可以匿名访问
        /* chain.addPathDefinition("/actuator/**", "anon");*/
+        chain.addPathDefinition("/css/**", "anon");
+        chain.addPathDefinition("/js/**", "anon");
+        chain.addPathDefinition("/imags/**", "anon");
+        chain.addPathDefinition("/layui/**", "anon");
         chain.addPathDefinition("/login", "anon");
         chain.addPathDefinition("/admin/**", "anon");
         //除了以上的请求外，其它请求都需要登录

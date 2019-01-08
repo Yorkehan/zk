@@ -127,8 +127,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
-                <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-zookeeper-dependencies -->
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-zookeeper-dependencies -->
                 <!--<dependency>
                     <groupId>org.springframework.cloud</groupId>
                     <artifactId>spring-cloud-starter-zookeeper-all</artifactId>
